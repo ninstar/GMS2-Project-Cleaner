@@ -1,13 +1,14 @@
 Total_Removed = 0;
 Total_Found = 0;
-Target = get_open_filename("GameMaker Studio 2 Project|*.yyp", "");
+Target = get_open_filename("GameMaker Studio 2 Project (.yyp)|*.yyp", "");
 
 if(Target != ""){
 	
-	show_message("The project will be scanned, a new window will appear when the process is finished.\nPress OK to proceed.");
+	show_message("The project will be scanned now, a new window will appear when the process is finished.\nPress OK to proceed.");
 	
 	Filter = [
 
+		"animcurves",
 		"extensions",
 		"fonts",
 		"notes",
@@ -23,68 +24,64 @@ if(Target != ""){
 
 	for(var t = 0; t < array_length(Filter); ++t){
 
-		// Tipo de asset alvo
+		// Asset filter
 		var _TypeDir = filename_path(Target)+Filter[t]+"\\";
 	
-		#region Analisar
+		#region Scan
 	
-		// Buscar pastas de assets
+		// Search asset directories
 		var _Index = 0;
 		var _Find = file_find_first(_TypeDir+"*", fa_directory);
-	
-		// Enquanto busca for válida...
 		while(_Find != ""){
 		
-			// Salvar nome do asset
+			// Save asset name
 			AssetName[_Index] = filename_name(_Find);
 		
-			// Buscar próximo asset...
+			// Search for next asset...
 			_Find = file_find_next();
 			_Index++;
 		}
 	
-		// Terminar busca
+		// End search
 		file_find_close();
 	
 		#endregion
-		#region Limpar
+		#region Clean
 	
-		// Selecionar pasta do asset alvo...
+		// Target asset folder
 		for(var a = 0; a < array_length(AssetName); ++a){
 	
-			// Buscar arquivos .yy dentro da pasta do asset
+			// Search for .yy files within the asset directory
 			var _aFind = file_find_first(_TypeDir+AssetName[a]+"\\*.yy", 0);
-		
-			// Enquanto busca for válida...
 			while(_aFind != ""){
 		
-				// Remover se arquivo não tiver mesmo nome do asset
+				// Remove if file does not have the same asset name
 				if(string_lower(_aFind) != string_lower(AssetName[a]+".yy")){
 				
-					// Registrar
+					// Log
 					Log_Queue[Total_Removed] = _aFind;
 					
-					// Remover
+					// Remove
 					file_delete(_TypeDir+AssetName[a]+"\\"+_aFind);
 					Total_Removed++;
 				}
 			
-				// Buscar próximo arquivo...
+				// Search next file...
 				_aFind = file_find_next();
 				Total_Found++;
 			}
 
-			// Terminar busca
+			// End search
 			file_find_close();
 		}
 	
 		#endregion
 	}
 
-	show_message("Finished, select the location where you want to save the log file");
+	show_message("Finished, select the location where you want to save the log file.");
 	
-	// Salvar log
-	var List = get_save_filename("Text File|*.txt","Log.txt");
+	// Save log
+	var List = get_save_filename("Text document|*.txt", "Log.txt");
 	if(List != ""){
 	
 		var TxtFile = file_text_open_write(List);
