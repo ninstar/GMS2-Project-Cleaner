@@ -6,7 +6,7 @@ Be aware that this tool is still under tests, make a backup of your project befo
 
 ## Usage
 
-1. [Download](https://github.com/ninstar/GMS2-Project-Cleaner/releases) and run application.
+1. [Download](https://github.com/ninstar/GMS2-Project-Cleaner/releases) and run the application.
 2. Select the ``.yyp`` file of your project.
 3. Wait until the process is finished.
 	+ A log file will be generated.
@@ -15,5 +15,5 @@ Be aware that this tool is still under tests, make a backup of your project befo
 
 In order to compile the application you will need:
 
-- *GameMaker Studio 2 - Runtime v23.1.1.187* or newer.
-> The code can be easily ported to older versions.
+- *GameMaker Studio 2 - Runtime v23.1.1.230* or newer.
+> The code can be easily ported to older versions if necessary.

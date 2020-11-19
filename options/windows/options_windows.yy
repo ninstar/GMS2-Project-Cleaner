@@ -1,7 +1,7 @@
 {
-  "option_windows_display_name": "GMS2 Project Cleaner",
+  "option_windows_display_name": "Project Cleaner",
   "option_windows_executable_name": "${project_name}.exe",
-  "option_windows_version": "0.2.0.0",
+  "option_windows_version": "0.1.0.0",
   "option_windows_company_info": "Nin★ (NinStar)",
   "option_windows_product_info": "Project Cleaner for GameMaker Studio 2",
   "option_windows_copyright_info": "Nin★ (NinStar)",

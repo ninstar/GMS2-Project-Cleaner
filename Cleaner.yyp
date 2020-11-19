@@ -1,7 +1,7 @@
 {
   "resources": [
-    {"id":{"name":"obj_Program","path":"objects/obj_Program/obj_Program.yy",},"order":3,},
-    {"id":{"name":"rm_Program","path":"rooms/rm_Program/rm_Program.yy",},"order":4,},
+    {"id":{"name":"oProgram","path":"objects/oProgram/oProgram.yy",},"order":3,},
+    {"id":{"name":"rSandbox","path":"rooms/rSandbox/rSandbox.yy",},"order":4,},
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},
@@ -17,7 +17,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"rm_Program","path":"rooms/rm_Program/rm_Program.yy",},},
+    {"roomId":{"name":"rSandbox","path":"rooms/rSandbox/rSandbox.yy",},},
   ],
   "Folders": [],
   "AudioGroups": [
