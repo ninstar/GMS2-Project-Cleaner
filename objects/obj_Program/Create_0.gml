@@ -1,6 +1,7 @@
 Total_Removed = 0;
 Total_Found = 0;
 Target = get_open_filename("GameMaker Studio 2 Project (.yyp)|*.yyp", "");
+AssetName = "";
 
 if(Target != ""){
 	
