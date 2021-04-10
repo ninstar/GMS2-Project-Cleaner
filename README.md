@@ -1,19 +1,18 @@
 # GMS2 Project Cleaner
 
-This application scans and removes all unused ``.yy`` files from your GameMaker Studio 2 project.
+This application scans and removes all unused ``.yy`` files from projects made with GameMaker Studio 2.
 
-Be aware that this tool is still under tests, make a backup of your project before using it.
+Always make a backup of your project before using it.
 
 ## Usage
 
-1. [Download](https://github.com/ninstar/GMS2-Project-Cleaner/releases) and run the application.
-2. Select the ``.yyp`` file of your project.
-3. Wait until the process is finished.
+- Tested with runtime *v23.1.1.230*.
+
+1. Make sure that **sandbox** is disabled on your IDE.
+2. Copy and paste this [script](https://github.com/ninstar/GMS2-Project-Cleaner/blob/main/Script.gml) in the creation code.
+3. Run the compiler.
+4. Select the ``.yyp`` file of your project.
+5. Wait until the process is finished.
 	+ A log file will be generated.
 
-## Compiling
-
-In order to compile the application you will need:
-
-- *GameMaker Studio 2 - Runtime v23.1.1.230* or newer.
-> The code can be easily ported to older versions if necessary.
+> Alternatively, you can use [this](https://github.com/ninstar/GMS2-Project-Cleaner/releases/download/0.1/Cleaner.zip) compiled application.
