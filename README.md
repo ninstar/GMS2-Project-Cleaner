@@ -1,3 +1,8 @@
+
+⚠ Code moved to [ninstar/yyProjects](https://github.com/ninstar/yyProjects)
+
+--- 
+
 # GMS2 Project Cleaner
 
 Scan and remove unused assets and graphics from projects made with GameMaker Studio 2.
